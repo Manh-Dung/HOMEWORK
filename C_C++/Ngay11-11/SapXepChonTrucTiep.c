@@ -14,12 +14,12 @@ void sapXepMang(int arr[]) {
         for(int j = i + 1; j < 8 ; j++) {
             if (arr[j ] < arr[min]) {
                 min = j;
-            }
-            swap(&arr[min], &arr[i]);
-            stt++;
-            printf ("\n%d. Mang sau khi sap xep la: ", stt);
-            for (int x = 0; x < 8; x++) {
-                printf ("%d ", arr[x]);
+                swap(&arr[min], &arr[i]);
+                stt++;
+                printf ("\n%d. Mang sau khi sap xep la: ", stt);
+                for (int x = 0; x < 8; x++) {
+                    printf ("%d ", arr[x]);
+                }
             }
         }
     }

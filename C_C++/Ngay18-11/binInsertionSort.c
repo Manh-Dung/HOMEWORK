@@ -3,7 +3,7 @@
 void sapXepMang(int a[])
 {
     int count = 0;
-
+    
     printf("%d. Mang khi chua sap xep la: ", count);
     for (int i = 0; i < 9; i++){
         printf("%d ", a[i]);
@@ -33,8 +33,6 @@ void sapXepMang(int a[])
             printf("%d ", a[i]);
         }
     }
-
-    
 }
 
 int main()

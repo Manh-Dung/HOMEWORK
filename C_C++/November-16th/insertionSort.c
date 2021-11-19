@@ -25,7 +25,8 @@ void sapXepMang(int a[]){
 }
 
 int main(){
-    int a[9] = {3, 6, 1, -1, 0, 5, 8, 2, 4};
+    int a[] = {3, 6, 1, -1, 0, 5, 8, 2, 4};
+	int n = sizeof(a);
     sapXepMang(a);
     return 0;
 }

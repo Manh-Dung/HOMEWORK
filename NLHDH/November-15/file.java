@@ -1,19 +1,22 @@
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class file {
-  public static void main(String[ ] args) {
-    File x = new File("C:\\Users\\dung5\\OneDrive\\HOMEWORK\\NLHDH");
+    public static void main(String[] args) {
+        String fol = "C:\\Users\\dung5\\OneDrive\\HOMEWORK\\NLHDH\\November-15";
 
-    System.out.println("File name: " + x.getName());
-    System.out.println("File parent: " + x.getParent());
-    System.out.println("File path: " + x.getPath());
-
-
-    if(x.exists()) {
-     System.out.println(x.getName() +  " exists!");
+        try {
+            List<File> files = Files.list(Paths.get(fol)).filter(Files::isRegularFile).map(Path::toFile)
+                    .collect(Collectors.toList());
+                    
+            files.forEach(System.out::println);
+        } catch (IOException e) {
+            // Error while reading the directory
+        }
     }
-    else {
-     System.out.println("The file does not exist");
-    }
-  }
 }

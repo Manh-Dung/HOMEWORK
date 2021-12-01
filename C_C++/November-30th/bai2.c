@@ -91,7 +91,6 @@ node DelAt(node head, int position){
     if(position == 0 || head == NULL || head->next == NULL){
         head = DelHead(head); 
     }else{
-        
         int k = 1;
         node p = head;
         while(p->next->next != NULL && k != position){
@@ -120,16 +119,11 @@ int Search(node head, int value){
 }
  
 node DelByVal(node head, int value){
-    if (head->data == value) DelHead(head);
-    else 
-        for(node p = head; p != NULL; p = p->next){
-            if (p->data == value){
-                while(p->next->next != NULL && p->data != value){
-                    p = p->next;
-                }
-                p->next = p->next->next;
-            }
-        }
+    int position = Search(head, value);
+    while(position != -1){
+        head = DelAt(head, position);
+        position = Search(head, value);
+    }
     return head;
 }
  
@@ -140,14 +134,8 @@ void Output(node head){
     }
 }
  
-node InitHead(){
-    node head;
-    head = NULL;
-    return head;
-}
- 
 node Input(){
-    node head = InitHead();
+    node head = NULL;
     int n, value;
     do{
         printf("\nNhap so luong phan tu n = ");
@@ -167,32 +155,32 @@ int main(){
     node head = Input();
     Output(head);
  
-    printf("\n\nThem 1 phan tu vao dau danh sach: ");
-    head = AddHead(head, 20);
-    Output(head);
+    // printf("\n\nThem 1 phan tu vao dau danh sach: ");
+    // head = AddHead(head, 20);
+    // Output(head);
 
-    printf("\n\nThem 1 phan tu vao vi tri thu 2 cua danh sach: ");
-    head = AddAt(head, 100, 2);
-    Output(head);
+    // printf("\n\nThem 1 phan tu vao vi tri thu 2 cua danh sach: ");
+    // head = AddAt(head, 100, 2);
+    // Output(head);
 
-    printf("\n\nXoa phan tu o dau danh sach: ");
-    head = DelHead(head);
-    Output(head);
+    // printf("\n\nXoa phan tu o dau danh sach: ");
+    // head = DelHead(head);
+    // Output(head);
 
-    printf("\n\nXoa phan tu o cuoi danh sach: ");
-    head = DelTail(head);
-    Output(head);
+    // printf("\n\nXoa phan tu o cuoi danh sach: ");
+    // head = DelTail(head);
+    // Output(head);
 
-    printf("\n\nXoa phan tu o vi tri 2 khoi danh sach: ");
-    head = DelAt(head, 2);
-    Output(head);
+    // printf("\n\nXoa phan tu o vi tri 2 khoi danh sach: ");
+    // head = DelAt(head, 2);
+    // Output(head);
     
-    printf("\n\nTim kiem phan tu co gia tri bang 3 trong danh sach: ");
-    int index = Search(head, 3);
-    if (index != -1)
-        printf("\nTim thay tai chi so %d", index);
-    else 
-        printf("Khong tim thay phan tu trong danh sach!");
+    // printf("\n\nTim kiem phan tu co gia tri bang 3 trong danh sach: ");
+    // int index = Search(head, 3);
+    // if (index != -1)
+    //     printf("\nTim thay tai chi so %d", index);
+    // else 
+    //     printf("Khong tim thay phan tu trong danh sach!");
 
     printf("\n\nXoa phan tu co gia tri bang 1 khoi danh sach: ");
     head = DelByVal(head, 1);

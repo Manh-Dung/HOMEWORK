@@ -40,15 +40,9 @@ void Output(node head){
         printf("(%d, %d) ", p->coSo, p->soMu);
     }
 }
-
-node InitHead(){
-    node head;
-    head = NULL;
-    return head;
-}
  
 node Input(){
-    node head = InitHead();
+    node head = NULL;
     int n, a, b;
     do{
         printf("\nNhap so luong phan tu n = ");

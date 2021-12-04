@@ -62,6 +62,8 @@ int main()
     scanf("%d", &n);
 
     nhapMang(a, n);
+    xuatMang(a, n);
+    printf("\n\n");
 
     int left = 0;
     int right = n - 1;

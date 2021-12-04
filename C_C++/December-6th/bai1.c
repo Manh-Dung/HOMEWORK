@@ -33,7 +33,7 @@ void AddTail(int x, int y) {
 }
  
 void Output() {
-    printf("\nXuat danh sach the chieu xuoi: \n");
+    printf("\nXuat danh sach theo chieu xuoi: \n");
     for(struct Node *p = head; p != NULL; p = p->next){
         printf("(%d, %d) ", p->coSo, p->soMu);
     }
@@ -41,7 +41,7 @@ void Output() {
 }
  
 void ReverseOutput() {
-    printf("\nXuat danh sach the chieu nguoc: \n");
+    printf("\nXuat danh sach theo chieu nguoc: \n");
     for(struct Node *p = tail; p != NULL; p = p->prev){
         printf("(%d, %d) ", p->coSo, p->soMu);
     }

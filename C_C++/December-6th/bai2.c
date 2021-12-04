@@ -8,6 +8,7 @@ struct LinkedList {
 };
  
 typedef struct LinkedList *node; 
+node head, tail;
  
 node CreateNode(int value) {
     node temp;
@@ -18,7 +19,7 @@ node CreateNode(int value) {
     return temp;
 }
  
-node AddTail(node head, node tail, int value) {
+void AddTail(int value) {
     node temp = CreateNode(value);
     if(head == NULL) {
         head = temp;
@@ -28,27 +29,24 @@ node AddTail(node head, node tail, int value) {
     tail->next = temp;
     temp->prev = tail;
     tail = temp;
-    return head;
 }
 
-node AddHead(node head, node tail, int value){
+void AddHead(int value){
     node temp = CreateNode(value); 
     if(head == NULL){
         head = temp; 
         tail = temp;
-        return head;
     }else{
         head->prev = temp;
         temp->next = head;
         tail = head;
         head = temp; 
     }
-    return head;
 }
 
- node AddAt(node head, node tail, int value, int position){
+void AddAt(int value, int position){
     if(position == 0 || head == NULL){
-        head = AddHead(head, tail, value);
+        AddHead(value);
     }else{
         int k = 1;
         node p = head;
@@ -58,7 +56,7 @@ node AddHead(node head, node tail, int value){
         }
  
         if(k != position){
-            head = AddTail(head, tail, value);
+            AddTail(value);
         }else{
             node temp = CreateNode(value);
             temp->next = p->next;
@@ -67,29 +65,26 @@ node AddHead(node head, node tail, int value){
             p->next->prev = temp;
         }
     }
-    return head;
 }
 
-node DelHead(node head, node tail){
+void DelHead(){
     if(head == NULL){
         printf("\nCha co gi de xoa het!");
     }else{
         head = head->next;
         head->prev = NULL;
     }
-    return head;
 }
 
-node DelTail(node head, node tail){
+void DelTail(){
     if (head == NULL || head->next == NULL){
-         return DelHead(head, tail);
+         return DelHead();
     }
     tail = tail->prev;
     tail->next = NULL;
-    return head;
 }
 
-int Length(node head, node tail){
+int Length(){
     int length = 0;
     for(node p = head; p != tail->next; p = p->next){
         ++length;
@@ -97,12 +92,12 @@ int Length(node head, node tail){
     return length;
 }
 
-node DelAt(node head, node tail, int position){
+void DelAt(int position){
     if(position == 0 || head == NULL || head->next == NULL){
-        head = DelHead(head, tail); 
+        DelHead(); 
     }
     else if (position == Length(head) - 1){
-        head = DelTail(head, tail);
+        DelTail();
     }
     else{
         int k = 1;
@@ -113,16 +108,15 @@ node DelAt(node head, node tail, int position){
         }
  
         if(k != position){
-            head = DelTail(head, tail);
+            DelTail();
         }else{
             p->next = p->next->next;
             p->next->prev = p;
         }
     }
-    return head;
 }
 
-int Search(node head, node tail, int value){
+int Search(int value){
     int position = 0;
     for(node p = head; p != tail->next; p = p->next){
         if(p->data == value){
@@ -133,32 +127,31 @@ int Search(node head, node tail, int value){
     return -1;
 }
 
-node DelByVal(node head, node tail, int value){
-    int position = Search(head, tail, value);
+void DelByVal(int value){
+    int position = Search(value);
     while(position != -1){
-        head = DelAt(head, tail, position);
-        position = Search(head, tail, value);
+        DelAt(position);
+        position = Search(value);
     }
-    return head;
 }
 
-void Output(node head, node tail) {
-    printf("\nXuat danh sach the chieu xuoi: \n");
+void Output() {
+    printf("\nXuat danh sach theo chieu xuoi: \n");
     for(node p = head; p != NULL; p = p->next){
         printf("%5d ", p->data);
     }
     printf("\n");
 }
  
-void ReverseOutput(node head, node tail) {
-    printf("\nXuat danh sach the chieu nguoc: \n");
+void ReverseOutput() {
+    printf("\nXuat danh sach theo chieu nguoc: \n");
     for(node p = tail; p != NULL; p = p->prev){
         printf("%5d ", p->data);
     }
     printf("\n");
 }
 
-node Input(){
+void Input(){
     head = NULL;
     tail = NULL;
     int n, value;
@@ -170,15 +163,29 @@ node Input(){
     for(int i = 0; i < n; ++i){
         printf("\nNhap gia tri can them: ");
         scanf("%d", &value);
-        head = AddTail(head, value);
+        AddTail(value);
     }
-    return head;
 }
  
 int main() {
     printf("\nTao 1 danh sach lien ket: "); 
-    node tail = NULL;
-    node head = Input();
-    Output(head, tail);
+    Input();
+    Output();
     ReverseOutput();
+
+    printf("\nXoa phan tu dau day: \n");
+    DelHead();
+    Output();
+    
+    printf("\nXoa phan tu cuoi day: \n");
+    DelTail();
+    Output();
+
+    printf("\nXoa phan tu o vi tri thu 2: \n");
+    DelAt(2);
+    Output();
+
+    printf("\nXoa phan tu co gia tri 1: \n");
+    DelByVal(1);
+    Output();
 }

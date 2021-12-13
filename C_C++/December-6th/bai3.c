@@ -85,40 +85,17 @@ int Length(){
 }
 
 // void sort(node head){
-//     node tag = CreateNode(0);
-//     node temp = CreateNode(0);
-//     if (head == tail) return;
-
-//     node left = CreateNode(0);
-//     node right = CreateNode(0);
-//     tag = head;
-//     tag->next = NULL;
-//     head = head->next;
-//     while (head != NULL){
-//         temp = head;
-//         head = head->next;
-//         head->prev = NULL;
-//         temp->next = NULL;
-//         if (temp->data >= tag->data) AddHead(left, temp->data);
-//         else AddHead(right, temp->data);
+//     node temp1;
+//     node temp2;
+//     for (temp1 = head; temp1 != NULL; temp1 = temp1->next){
+//         for (temp2 = temp1->next; temp2 != NULL; temp2 = temp2->next){
+//             if (temp1->data > temp2->data){
+//                 int temp = temp1->data;
+//                 temp1->data = temp2->data;
+//                 temp2->data = temp;
+//             }
+//         }
 //     }
-//     sort(right);
-//     if (right != NULL){
-//         head = right;
-//         tail->next = tag;
-//         tag->prev = tail;
-//     }
-//     else {
-//         tag->next = left;
-//         left->prev = tail;
-//         head = tag;   
-//     }
-//     sort(left);
-//     if (left != NULL){
-//         left->prev = tag;
-//         tag->next = left;
-//     }
-//     else tag->next = NULL;
 // }
  
 int main() {
@@ -127,7 +104,7 @@ int main() {
     Output();
     ReverseOutput();
 
-    printf("\nMang sau khi sap xep la: ");
-    sort(head);
-    Output();
+    // printf("\nMang sau khi sap xep la: ");
+    // sort(head);
+    // Output();
 }

@@ -1,4 +1,3 @@
-#include <limits.h> 
 #include <stdio.h> 
 #include <stdlib.h> 
   
@@ -25,50 +24,43 @@ int isFull(stack stack)
     return stack->top == stack->capacity - 1; 
 } 
   
-int isEmpty(stack stack) 
-{ 
-    return stack->top == -1; 
-} 
-  
 void push(stack stack, int item) 
 { 
     if (isFull(stack)) 
         return; 
-    stack->array[++stack->top] = item; 
+    ++stack->top;
+    stack->array[stack->top] = item; 
     printf("%d pushed to stack\n", item); 
 } 
-  
-void pop(stack stack) 
-{ 
-    if (isEmpty(stack)) 
-        return INT_MIN; 
-    stack->top--; 
-    stack->capacity--;
-} 
-  
-int peak(stack stack) 
-{ 
-    if (isEmpty(stack)) 
-        return INT_MIN; 
-    return stack->array[stack->top]; 
-} 
 
-void reverstPrint(int *a, int n){
+void reversePrint(int *a, int n){
     for (int i = n - 1; i >= 0; i--){
         printf("\na[%d] = %d", i, a[i]);
+    }
+}
+
+void decToBin(stack stack, int data){
+    int x;
+    for (; data > 0; data = data / 2){
+        x = data % 2;
+        push(stack, x);
+    }
+}
+
+void binaryPrint(stack stack){
+    printf("So he thap phan chuyen sang so he nhi phan la: ");
+    for (int i = stack->top; i >= 0; i--){
+        printf("%d", stack->array[i]);
     }
 }
   
 int main() 
 { 
-    stack stack = createStack(3); 
-  
-    push(stack, 10); 
-    push(stack, 20); 
-    push(stack, 30); 
-  
-    pop(stack);
-    reverstPrint(stack->array, stack->capacity);
-    
+    stack stack = createStack(100); 
+    printf("Nhap so he thap phan can chuyen: ");
+    int x;
+    scanf("%d", &x);
+    decToBin(stack, x);
+    binaryPrint(stack);
     return 0; 
 } 

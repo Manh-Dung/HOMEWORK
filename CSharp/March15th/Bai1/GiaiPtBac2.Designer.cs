@@ -147,7 +147,6 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "GiaiPtBac2";
             this.Text = "Giải phương trình bậc 2";
-            this.Load += new System.EventHandler(this.GiaiPtBac2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

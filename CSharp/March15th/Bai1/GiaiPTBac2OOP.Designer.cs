@@ -153,7 +153,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GiaiPTBac2OOP";
             this.Text = "GiaiPTBac2OOP";
-            this.Load += new System.EventHandler(this.GiaiPTBac2OOP_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

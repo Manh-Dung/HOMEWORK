@@ -1,28 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Test
 {
-    internal class Program
+    internal static class Program
     {
-        class test
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            private double diem;
-            public double Diem
-            {
-                get { return diem; }
-                set { diem = value; }
-            }
-        }
-        static void Main(string[] args)
-        {
-            test t = new test();
-            t.Diem = 10;
-            Console.WriteLine(t.Diem);
-            Console.ReadLine();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

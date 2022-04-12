@@ -51,9 +51,13 @@ namespace Bai1
             if (a != 0)
             {
                 if (delta < 0)
+                {
                     nghiem = "Phuong trinh vo nghiem!";
+                }
                 else if (delta == 0)
+                {
                     nghiem = "x1 = x2 = " + (-b / (2 * a)).ToString();
+                }
                 else
                 {
                     double x1 = (-b + Math.Sqrt(delta)) / (2 * a);

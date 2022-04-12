@@ -16,7 +16,7 @@ namespace Bai1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GiaiPtBac2());
+            Application.Run(new GiaiPTBac2OOP());
         }
     }
 }

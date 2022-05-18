@@ -16,7 +16,7 @@ namespace Vidu1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new checkBox());
+            Application.Run(new radioButton());
         }
     }
 }

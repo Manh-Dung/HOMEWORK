@@ -39,10 +39,10 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(209, 167);
+            this.btnDangNhap.Location = new System.Drawing.Point(117, 167);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(109, 27);
+            this.btnDangNhap.Size = new System.Drawing.Size(152, 27);
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -50,19 +50,19 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(324, 167);
+            this.btnThoat.Location = new System.Drawing.Point(275, 167);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(93, 27);
+            this.btnThoat.Size = new System.Drawing.Size(142, 27);
             this.btnThoat.TabIndex = 5;
-            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Text = "Tạo tài khoản mới";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 54);
+            this.label1.Location = new System.Drawing.Point(44, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 5;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 102);
+            this.label2.Location = new System.Drawing.Point(44, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 6;
@@ -79,25 +79,25 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(149, 51);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(117, 51);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(268, 27);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(300, 27);
             this.txtTaiKhoan.TabIndex = 1;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(149, 102);
+            this.txtMatKhau.Location = new System.Drawing.Point(117, 102);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(268, 27);
+            this.txtMatKhau.Size = new System.Drawing.Size(300, 27);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(149, 137);
+            this.checkBox1.Location = new System.Drawing.Point(117, 137);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(154, 23);
             this.checkBox1.TabIndex = 3;

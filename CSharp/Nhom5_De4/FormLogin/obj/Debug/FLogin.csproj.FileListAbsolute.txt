@@ -25,3 +25,4 @@ C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\Nhom5_De4\FormLogin\obj\Debug\F
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\Nhom5_De4\FormLogin\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\Nhom5_De4\FormLogin\bin\Debug\GemBox.Spreadsheet.dll
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\Nhom5_De4\FormLogin\bin\Debug\GemBox.Spreadsheet.xml
+C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\Nhom5_De4\FormLogin\obj\Debug\FormLogin.FAdMain.resources

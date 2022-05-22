@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 using DAL;
 using DTO;
 
@@ -64,7 +65,12 @@ namespace BUS
         // Table Account
         public void ThemAcc(string us, string pw)
         {
-            string sql = "insert Account values(N'" + us + "', N'" + pw + "')";
+            string sql = "insert Account values(N'" + us + "', N'" + pw + "'," + 0 + ")";
+            da.ExcuteNonQuery(sql);
+        }
+        public void ThemAcc(string us, string pw, int pq)
+        {
+            string sql = "insert Account values(N'" + us + "', N'" + pw + "'," + pq + ")";
             da.ExcuteNonQuery(sql);
         }
         public void SuaMK(string us, string opw, string npw)
@@ -72,6 +78,51 @@ namespace BUS
             string sql = "update Account set passWord = N'" + npw + "' where userName = N'" + us + "' and passWord = N'" + opw + "'";
             da.ExcuteNonQuery(sql);
         }
+        public bool CheckAccount(string us, string pw)
+        {
+            string sql = "select * from Account where userName = N'" + us + "' and passWord = N'" + pw + "'";
+
+            SqlConnection conn = da.getConnect();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            var reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public int CheckQuyen(string us, string pw)
+        {
+            string sql = "select * from Account where userName = N'" + us + "' and passWord = N'" + pw + "'";
+
+            SqlConnection conn = da.getConnect();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            var reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    L.UserName = reader.GetString(0);
+                    L.PassWord = reader.GetString(1);
+                    L.QuyenHan = reader.GetInt32(2);
+                }
+                if (L.QuyenHan == 1) return 1;
+                else return 0;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        
 
         // Table Khoa
         public DataTable ShowKhoa()

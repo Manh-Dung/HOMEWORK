@@ -41,8 +41,15 @@ namespace FormLogin
                     gv_DTO.UserName = txtTaiKhoan.Text;
                     gv_DTO.PassWord = txtOldPass.Text;
                     gv_DTO.NewPass = txtNewPass.Text;
-                    gv_BUS.SuaMK(gv_DTO.UserName, gv_DTO.PassWord, gv_DTO.NewPass);
-                    MessageBox.Show("Đã thay đổi mật khẩu thành công!");
+                    if (gv_BUS.CheckAccount(gv_DTO.UserName, gv_DTO.PassWord) == true)
+                    {
+                        gv_BUS.SuaMK(gv_DTO.UserName, gv_DTO.PassWord, gv_DTO.NewPass);
+                        MessageBox.Show("Đã thay đổi mật khẩu thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai mật khẩu hoặc tài khoản!");
+                    }
                 }
                 catch (System.Data.SqlClient.SqlException ex)
                 {

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using BUS;
+using DTO;
+using DAL;
 
 namespace FormLogin
 {
@@ -18,10 +21,14 @@ namespace FormLogin
         {
             InitializeComponent();
         }
-
+        LopDTO gv_DTO = new LopDTO();
+        LopBUS gv_BUS = new LopBUS();
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FCreNewAcc f = new FCreNewAcc();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void FLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,17 +45,28 @@ namespace FormLogin
             try
             {
                 conn.Open();
-                string tk = txtTaiKhoan.Text;
-                string mk = txtMatKhau.Text;
-                string sql = "select * from Account where userName = '" + tk + "' and passWord = '" + mk + "'";
+                gv_DTO.UserName = txtTaiKhoan.Text;
+                gv_DTO.PassWord = txtMatKhau.Text;
+                string sql = "select * from Account where userName = '" + gv_DTO.UserName + "' and passWord = '" + gv_DTO.PassWord + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
-                    FMain f = new FMain();
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Show();
+                    if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 0)
+                    {
+                        FMain f = new FMain();
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Show();
+                    }
+                    if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 1)
+                    {
+                        FMain f = new FMain();
+                        this.Hide();
+                        f.themTK.Enabled = true;
+                        f.ShowDialog();
+                        this.Show();
+                    }
                 }
                 else
                 {

@@ -9,12 +9,12 @@ namespace DTO
     public class LopDTO
     {
         // TABLE ACCOUNT
-        private int id; 
         private string userName, passWord, newPass;
-        public int Id { get => id; set => id = value; }
+        private int quyenHan;
         public string UserName { get => userName; set => userName = value; }
         public string PassWord { get => passWord; set => passWord = value; }
         public string NewPass { get => newPass; set => newPass = value; }
+        public int QuyenHan { get => quyenHan; set => quyenHan = value; }
 
         // TABLE GIANG VIEN
         private string maGV, tenGV, ngaySinhGiangVien, queQuanGV, maKhoa, maMonHoc, maLop, sdt, email;

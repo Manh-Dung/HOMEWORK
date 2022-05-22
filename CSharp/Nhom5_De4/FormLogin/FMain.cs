@@ -45,7 +45,7 @@ namespace FormLogin
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FCreNewAcc f = new FCreNewAcc();
+            FCreNewAccAd f = new FCreNewAccAd();
             this.Hide();
             f.ShowDialog();
             this.Show();

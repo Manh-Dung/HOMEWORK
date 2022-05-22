@@ -58,12 +58,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FAdMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAdMain.Designer.cs">
-      <DependentUpon>FAdMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCreNewAcc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +69,12 @@
     </Compile>
     <Compile Include="FChangePass.Designer.cs">
       <DependentUpon>FChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCreNewAccAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCreNewAccAd.Designer.cs">
+      <DependentUpon>FCreNewAccAd.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -108,14 +108,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FAdMain.resx">
-      <DependentUpon>FAdMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FCreNewAcc.resx">
       <DependentUpon>FCreNewAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChangePass.resx">
       <DependentUpon>FChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCreNewAccAd.resx">
+      <DependentUpon>FCreNewAccAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>

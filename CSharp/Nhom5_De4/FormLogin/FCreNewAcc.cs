@@ -42,7 +42,7 @@ namespace FormLogin
                 }
                 catch (System.Data.SqlClient.SqlException ex)
                 {
-                    MessageBox.Show("Có lỗi!"); 
+                    MessageBox.Show("Có lỗi!");
                     MessageBox.Show(ex.Message);
                 }
             }

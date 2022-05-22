@@ -25,14 +25,14 @@ namespace BUS
         }
         public void ThemGV(string mgv, string tgv, string ns, string qq, string mk, string mm, string ml, string sdt, string em)
         {
-            string sql = "insert GiangVien values(N'" + mgv + 
-                "', N'" + tgv + 
-                "', N'" + ns + 
-                "', N'" + qq + 
-                "', N'" + mk + 
-                "', N'" + mm + 
-                "', N'" + ml + 
-                "', N'" + sdt + 
+            string sql = "insert GiangVien values(N'" + mgv +
+                "', N'" + tgv +
+                "', N'" + ns +
+                "', N'" + qq +
+                "', N'" + mk +
+                "', N'" + mm +
+                "', N'" + ml +
+                "', N'" + sdt +
                 "', N'" + em + "')";
             da.ExcuteNonQuery(sql);
         }
@@ -122,7 +122,7 @@ namespace BUS
                 return -1;
             }
         }
-        
+
 
         // Table Khoa
         public DataTable ShowKhoa()

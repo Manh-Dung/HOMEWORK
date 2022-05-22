@@ -42,7 +42,7 @@
             // 
             // btnCreNew
             // 
-            this.btnCreNew.Location = new System.Drawing.Point(308, 206);
+            this.btnCreNew.Location = new System.Drawing.Point(308, 213);
             this.btnCreNew.Name = "btnCreNew";
             this.btnCreNew.Size = new System.Drawing.Size(146, 33);
             this.btnCreNew.TabIndex = 11;
@@ -103,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 166);
+            this.label4.Location = new System.Drawing.Point(64, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 19);
             this.label4.TabIndex = 6;
@@ -112,7 +112,7 @@
             // rdoAdmin
             // 
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(199, 166);
+            this.rdoAdmin.Location = new System.Drawing.Point(199, 177);
             this.rdoAdmin.Name = "rdoAdmin";
             this.rdoAdmin.Size = new System.Drawing.Size(117, 23);
             this.rdoAdmin.TabIndex = 12;
@@ -123,7 +123,7 @@
             // rdoNguoiDung
             // 
             this.rdoNguoiDung.AutoSize = true;
-            this.rdoNguoiDung.Location = new System.Drawing.Point(345, 166);
+            this.rdoNguoiDung.Location = new System.Drawing.Point(345, 177);
             this.rdoNguoiDung.Name = "rdoNguoiDung";
             this.rdoNguoiDung.Size = new System.Drawing.Size(109, 23);
             this.rdoNguoiDung.TabIndex = 12;
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 258);
+            this.ClientSize = new System.Drawing.Size(507, 270);
             this.Controls.Add(this.rdoNguoiDung);
             this.Controls.Add(this.rdoAdmin);
             this.Controls.Add(this.btnCreNew);

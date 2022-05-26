@@ -1,0 +1,33 @@
+ui,li,a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul{
+    width: 150px;
+    border: 1px solid rebeccapurple;
+    background:white;
+    list-style: none;
+
+}
+li{
+    position: relative;
+    padding: 1px;
+    padding-left: 26px;
+    background:url("../images/sao.png") no-repeat;
+    z-index:9;
+}
+a{
+    padding: 2px;
+    border: 1px solid white;
+    text-decoration: none;
+    color: gray;
+    font-weight:bold;
+    width: 100%;
+}
+a:hover{
+    border-color: gray;
+    background-color: salmon;
+    color: black;
+}

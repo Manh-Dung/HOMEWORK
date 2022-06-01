@@ -22,7 +22,7 @@ namespace FormLogin
         LopDTO gv_DTO = new LopDTO();
         LopBUS gv_BUS = new LopBUS();
 
-
+        // Tao tai khoan moi voi quyen han cua Admin
         private void btnCreNew_Click(object sender, EventArgs e)
         {
             if (txtTaiKhoan.TextLength == 0)

@@ -49,12 +49,6 @@ namespace March30th
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //conn = new SqlConnection(strConnectionString);
-            //conn.Open();
-            //String sql = "Insert into SanPham values ('" + txtMaSP.Text + "', '" + txtTenSP.Text
-            //+ "', '" + comboBox1.SelectedValue + "', '" + txtDonGia.Text + "')";
-            //cmd = new SqlCommand(sql, conn);
-            //cmd.ExecuteNonQuery();
             try
             {
                 conn = new SqlConnection(strConnectionString);

@@ -110,35 +110,35 @@
             this.themTK.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.themTK.Enabled = false;
             this.themTK.Name = "themTK";
-            this.themTK.Size = new System.Drawing.Size(224, 26);
+            this.themTK.Size = new System.Drawing.Size(214, 26);
             this.themTK.Text = "Thêm tài khoản";
             this.themTK.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // thayDoiMK
             // 
             this.thayDoiMK.Name = "thayDoiMK";
-            this.thayDoiMK.Size = new System.Drawing.Size(224, 26);
+            this.thayDoiMK.Size = new System.Drawing.Size(214, 26);
             this.thayDoiMK.Text = "Thay đổi mật khẩu";
             this.thayDoiMK.Click += new System.EventHandler(this.thayĐổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // dangXuat
             // 
             this.dangXuat.Name = "dangXuat";
-            this.dangXuat.Size = new System.Drawing.Size(224, 26);
+            this.dangXuat.Size = new System.Drawing.Size(214, 26);
             this.dangXuat.Text = "Đăng xuất";
             this.dangXuat.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             this.thoátToolStripMenuItem.ShortcutKeyDisplayString = "Alt + X";
             this.thoátToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 

@@ -23,6 +23,8 @@ namespace DAL
             da.Fill(dt);
             return (dt);
         }
+
+        public BindingSource
         public void ExcuteNonQuery(string sql)
         {
             SqlConnection conn = getConnection();

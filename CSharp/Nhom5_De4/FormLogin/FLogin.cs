@@ -41,32 +41,25 @@ namespace FormLogin
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=MOTHER-FUCKER;Initial Catalog=QLGiangDay;Integrated Security=True");
             try
             {
-                conn.Open();
                 gv_DTO.UserName = txtTaiKhoan.Text;
                 gv_DTO.PassWord = txtMatKhau.Text;
-                string sql = "select * from Account where userName = '" + gv_DTO.UserName + "' and passWord = '" + gv_DTO.PassWord + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta = cmd.ExecuteReader();
-                if (dta.Read() == true)
+
+                if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 0)
                 {
-                    if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 0)
-                    {
-                        FMain f = new FMain();
-                        this.Hide();
-                        f.ShowDialog();
-                        this.Show();
-                    }
-                    if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 1)
-                    {
-                        FMain f = new FMain();
-                        this.Hide();
-                        f.themTK.Enabled = true;
-                        f.ShowDialog();
-                        this.Show();
-                    }
+                    FMain f = new FMain();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else if (gv_BUS.CheckQuyen(gv_DTO.UserName, gv_DTO.PassWord) == 1)
+                {
+                    FMain f = new FMain();
+                    this.Hide();
+                    f.themTK.Enabled = true;
+                    f.ShowDialog();
+                    this.Show();
                 }
                 else
                 {
@@ -77,7 +70,6 @@ namespace FormLogin
             {
                 MessageBox.Show("Lỗi kết nối!" + ex.Message);
             }
-
         }
 
         private void checkBox1_Click(object sender, EventArgs e)

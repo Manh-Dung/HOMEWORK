@@ -17,7 +17,8 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgvLop.DataSource = loph.showLop();
+            //dgvLop.DataSource = loph.showLop();
+            dgvLop.DataSource = loph.showLopBS();
         }
 
         private void dgvLop_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -100,7 +101,8 @@ namespace GUI
             if (txtMaLop.TextLength == 0) MessageBox.Show("Bạn chưa nhập từ khóa tìm kiếm! ");
             else
             {
-                dgvLop.DataSource = loph.timKiem(txtTimKiem.Text);
+                //dgvLop.DataSource = loph.timKiem(txtTimKiem.Text);
+                dgvLop.DataSource = loph.timKiemBS(txtTimKiem.Text);
             }
         }
 

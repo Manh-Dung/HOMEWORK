@@ -18,7 +18,7 @@ namespace BUS
         // Table Giang vien
         public DataTable ShowGV()
         {
-            string sql = "select gv.maGV, gv.tenGV, gv.ngaySinhGV, gv.queQuanGV, gv.sdt, gv.email, k.maKhoa, l.maLop, mh.maMonHoc from (((GiangVien gv inner join Khoa k on gv.maKhoa = k.maKhoa) inner join Lop l on gv.maLop = l.MaLop) inner join MonHoc mh on gv.maMonHoc = mh.maMonHoc)";
+            string sql = "select gv.maGV, gv.tenGV, gv.ngaySinhGV, gv.queQuanGV, gv.sdt, gv.email, k.maKhoa, l.maLop, mh.maMonHoc" + " from (((GiangVien gv inner join Khoa k on gv.maKhoa = k.maKhoa) inner join Lop l on gv.maLop = l.MaLop) inner join MonHoc mh on gv.maMonHoc = mh.maMonHoc)";
             DataTable dt = new DataTable();
             dt = da.GetTable(sql);
             return dt;

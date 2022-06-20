@@ -22,6 +22,8 @@ namespace BUS
             dt = da.getTable(sql);
             return dt;
         }
+
+        public BindingSource
         public void insertLop(string ml, string tl, int ssv)
         {
             string sql = "insert Lop values(N'" + ml + "', N'" + tl + "', N'" + ssv + "')";

@@ -67,10 +67,7 @@ namespace GUI
             }
         }
 
-        private void checkBox1_Click(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = false;
-        }
+        
 
         private void btnNewAcc_Click(object sender, EventArgs e)
         {
@@ -78,6 +75,14 @@ namespace GUI
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void cbShowAcc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowAcc.Checked == true)
+                txtPassword.UseSystemPasswordChar = false;
+            else
+                txtPassword.UseSystemPasswordChar = true;
         }
     }
 }

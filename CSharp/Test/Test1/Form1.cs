@@ -22,17 +22,13 @@ namespace Test1
         {
             Form1 form = new Form1();
             dgvTourMau.DataSource = form.ShowGV();
+
+            
         }
         public DataTable ShowGV()
         {
             Form1 form = new Form1();
-            string sql = "DECLARE @columns NVARCHAR(MAX) = '', @sql NVARCHAR(MAX) = '';"
-                            + "SELECT @columns += QUOTENAME(Xe.tenXe) + ',' FROM Xe ORDER BY tenXe; "
-                            + "SET @columns = LEFT(@columns, LEN(@columns) - 1);"
-                            + "SET @sql ='"
-                            + "select * from (select tenXe, maTourMau, tenTour, chiPhi from bang) a"
-                            + "pivot(sum(chiPhi) for tenXe in (' + @columns +')) as pivot_table';"
-                            + "EXECUTE sp_executesql @sql;";
+            string sql = "select * from Account";
             DataTable dt = new DataTable();
             dt = form.GetTable(sql);
             return dt;
@@ -53,8 +49,25 @@ namespace Test1
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             cmd.Clone();
-            cmd.cl
             cmd.Dispose();
+        }
+
+        private void dgvTourMau_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int cot = e.ColumnIndex;
+            if (cot == 1)
+            {
+                Form2 f = new Form2();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void dgvTourMau_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int dong = e.RowIndex;
+            txtUser.Text = dgvTourMau.Rows.
         }
     }
 }

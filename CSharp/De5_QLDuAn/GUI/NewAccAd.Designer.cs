@@ -158,7 +158,6 @@
             this.dgvAccount.RowTemplate.Height = 24;
             this.dgvAccount.Size = new System.Drawing.Size(398, 273);
             this.dgvAccount.TabIndex = 23;
-            this.dgvAccount.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellDoubleClick);
             this.dgvAccount.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_RowEnter);
             // 
             // username

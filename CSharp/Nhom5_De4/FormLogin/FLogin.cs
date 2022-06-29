@@ -74,7 +74,10 @@ namespace FormLogin
 
         private void checkBox1_Click(object sender, EventArgs e)
         {
-            txtMatKhau.UseSystemPasswordChar = false;
+            if (checkBox1.Checked == true)
+                txtMatKhau.UseSystemPasswordChar = false;
+            else
+                txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }

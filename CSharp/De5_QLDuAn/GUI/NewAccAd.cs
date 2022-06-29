@@ -75,10 +75,5 @@ namespace GUI
             txtUsername.Text = dgvAccount.Rows[dong].Cells[0].Value.ToString();
             txtPassword.Text = dgvAccount.Rows[dong].Cells[1].Value.ToString();
         }
-
-        private void dgvAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

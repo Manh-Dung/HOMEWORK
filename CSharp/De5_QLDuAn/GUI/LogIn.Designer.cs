@@ -47,7 +47,7 @@
             this.cbShowAcc.TabIndex = 9;
             this.cbShowAcc.Text = "Hiển thị mật khẩu ";
             this.cbShowAcc.UseVisualStyleBackColor = true;
-            this.cbShowAcc.Click += new System.EventHandler(this.checkBox1_Click);
+            this.cbShowAcc.CheckedChanged += new System.EventHandler(this.cbShowAcc_CheckedChanged);
             // 
             // txtPassword
             // 

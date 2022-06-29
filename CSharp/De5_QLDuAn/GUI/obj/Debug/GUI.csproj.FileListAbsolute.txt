@@ -24,3 +24,6 @@ C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\obj\Debug\GUI.Gi
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\obj\Debug\GUI.Khoa.resources
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\obj\Debug\GUI.Lop.resources
 C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\obj\Debug\GUI.DeTai.resources
+C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\bin\Debug\GemBox.Spreadsheet.dll
+C:\Users\Acer\OneDrive\Documents\HOMEWORK\CSharp\De5_QLDuAn\GUI\bin\Debug\GemBox.Spreadsheet.xml
